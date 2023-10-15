@@ -1,0 +1,47 @@
+<style>
+  nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+  }
+
+  .logo {
+    color: white;
+    font-family: "Montserrat";
+    vertical-align: center;
+    margin-left: 50px;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+  }
+
+  .cart__button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 50px;
+  }
+
+  .items__count {
+    font-family: "Montserrat";
+    font-size: 10px;
+    background-color: #ad3939;
+    border-radius: 3px;
+    padding: 2px;
+    color: aliceblue;
+  }
+</style>
+<nav>
+  <div class="logo">
+    <strong routerLink="movies">MOVIE</strong>
+  </div>
+  <button routerLink="cart" class="cart__button">
+    <img src="./assets/cart.svg" alt="" />
+    <div class="items__count">{{ totalItem }}</div>
+  </button>
+</nav>

@@ -1,0 +1,35 @@
+<style>
+  .search__wrapper {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .search__input {
+    border-radius: 10px;
+    height: 30px;
+    width: 320px;
+    padding-left: 15px;
+    margin: 25px auto 25px auto;
+    display: block;
+  }
+  .search__icon {
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    z-index: 10;
+    position: absolute;
+    right: 45%;
+  }
+</style>
+
+<div class="container">
+  <form [formGroup]="searchForm" class="searchBar" (ngSubmit)="onSearchSubmit()">
+    <div class="search__wrapper">
+      <input type="text" placeholder="Movie name" formControlName="searchValue" class="search__input" />
+      <img src="./assets/search.svg" alt="search" class="search__icon" />
+    </div>
+  </form>
+  <div *ngFor="let movie of movies">{{ movie.title }}</div>
+</div>
