@@ -33,10 +33,12 @@
     background-color: #4caf50;
     border: none;
     color: white;
-    padding: 0px 115px;
+    padding: 10px 115px;
+    border-radius: 10px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
+    margin-top: 10px;
   }
 
   p {
@@ -47,10 +49,7 @@
 </style>
 <div class="card-wrapper" *ngIf="movies">
   <div class="card" *ngFor="let movie of movies">
-    <img
-      src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"
-      alt="Card Image"
-    />
+    <img src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Card Image" />
     <div class="card-content">
       <h3>{{ movie.title }}</h3>
       <div>
